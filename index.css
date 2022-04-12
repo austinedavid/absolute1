@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(90, 81, 81);
+}
+.main-divs{
+    width: 100%;
+    min-height: 100vh;
+    background-color: red;
+    position: absolute;
+    transform: translateY(-100%) scale(0);
+
+}
+.main1{
+    display: none;
+    background-color: yellow;
+    transform: translateY(0) scale(1);
+}
+.main2{
+    display: none;
+    background-color: green;
+    transform: translateY(0) scale(1);
+}
+.main3{
+    display: none;
+    background-color: red;
+    transform: translateY(0) scale(1);
+}
+.main4{
+    display: none;
+    background-color: orange;
+    transform: translateY(0) scale(1);
+}
+.main5{
+    display: none;
+    background-color: blue;
+    transform: translateY(0) scale(1);
+}
+
+.active{
+    display: block;
+    transition: all 0.5s ease-in-out;
+    animation: activean 0.5s ease-in-out;
+
+}
+@keyframes activean {
+    0%{
+        transform: translateY(-100%) scale(0);
+    }
+    100%{
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* this is for controls */
+.controls{
+    position: fixed;
+    display: flex;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem 1rem;
+   
+    
+    color: white;
+    
+}
+.control{
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    
+}
+.active-btn{
+    background-color: green;
+    transition: all 0.5s ease-in-out;
+}
